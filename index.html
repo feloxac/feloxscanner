@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FeloxAC Scanner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- KEY INPUT SCREEN -->
+        <div id="screen-key" class="screen active">
+            <div class="center-screen">
+                <img src="build/icon.png" alt="FeloxAC" class="main-logo" onerror="this.onerror=null;this.src='logo.webp';">
+                <h1 class="brand-title">FELOXAC</h1>
+                <span class="brand-sub">SCANNER</span>
+                <div class="key-form">
+                    <label class="key-label">Enter your scan key</label>
+                    <input type="text" id="key-input" class="key-input" placeholder="000000" maxlength="6" autofocus>
+                    <button id="key-submit" class="key-btn">START</button>
+                    <p id="key-error" class="key-error"></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SCANNING SCREEN -->
+        <div id="screen-scan" class="screen">
+            <div class="center-screen">
+                <img src="build/icon.png" alt="FeloxAC" class="main-logo scanning-pulse" onerror="this.onerror=null;this.src='logo.webp';">
+                <h1 class="brand-title">FELOXAC</h1>
+                <span class="brand-sub">SCANNING...</span>
+                <div class="scan-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                    <p class="progress-text" id="progress-text">Initializing...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- COMPLETE SCREEN -->
+        <div id="screen-done" class="screen">
+            <div class="center-screen">
+                <img src="build/icon.png" alt="FeloxAC" class="main-logo" onerror="this.onerror=null;this.src='logo.webp';">
+                <h1 class="brand-title">FELOXAC</h1>
+                <span class="brand-sub" id="done-status">COMPLETE</span>
+                <p class="done-text" id="done-text">Scan complete. Results have been uploaded.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="renderer.js"></script>
+</body>
+</html>
